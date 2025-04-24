@@ -1,0 +1,13 @@
+file_format: "1"
+id: ergoflowwinga
+name: ergoflowwinga
+type: shield
+url: https://github.com/aL1fe/ErgoFlowWingA.git
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+siblings:
+  - ergoflowwinga_left
+  - ergoflowwinga_right

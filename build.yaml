@@ -20,8 +20,8 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: ergoflowwing01_left
+    shield: ergoflowwinga_left
   - board: nice_nano_v2
-    shield: ergoflowwing01_right
+    shield: ergoflowwinga_right
   - board: nice_nano_v2
     shield: settings_reset
