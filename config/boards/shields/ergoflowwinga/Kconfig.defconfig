@@ -4,7 +4,7 @@
 if SHIELD_ERGOFLOWWINGA_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Ergoflowwing01"
+    default "ErgoFlow Wing-A"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
