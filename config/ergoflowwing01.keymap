@@ -1,0 +1,66 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+
+#define DEFAULT 0
+#define MO1 1
+#define MO2 2
+#define ADJUST 3
+
+/ {
+    macros {
+        pass01: pass01 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(M) &kp B &kp I &kp W &kp B &kp EXCL &kp N9 &kp N8 &kp N0 &kp M &kp B &kp I &kp W &kp B &kp N1>;
+            label = "PASS01";
+        };
+
+        unicode_dot: unicode_dot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LEFT_ALT &kp KP_NUMBER_4 &kp KP_NUMBER_6 &kt LEFT_ALT>;
+            label = "UNICODE_DOT";
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+&kp ESC       &kp N1        &kp N2    &kp N3     &kp N4  &kp N5  &none     &kp N6     &kp N7    &kp N8              &kp N9   &kp N0     &kp MINUS        &kp EQUAL
+&kp TAB       &kp Q         &kp W     &kp E      &kp R   &kp T   &kp BSPC  &kp Y      &kp U     &kp I               &kp O    &kp P      &kp LBKT         &kp RBKT
+&kp CAPSLOCK  &kp A         &kp S     &kp D      &kp F   &kp G   &kp DEL   &kp H      &kp J     &kp K               &kp L    &kp SEMI   &kp SQT          &kp BSLH
+&kp LSHFT     &kp Z         &kp X     &kp C      &kp V   &kp B   &kp UP    &kp N      &kp M     &kp COMMA           &kp DOT  &kp FSLH   &kp RIGHT_SHIFT  &kp BSPC
+&kp LCTRL     &kp LEFT_WIN  &kp LALT  &kp SPACE  &mo 1   &mo 2   &kp LEFT  &kp RIGHT  &kp DOWN  &kp LC(LEFT_SHIFT)  &mo 1    &kp SPACE  &kp RCTRL        &kp RET
+            >;
+        };
+
+        mo1_layer {
+            bindings = <
+&kp TILDE  &pass01  &none  &none                &none  &none  &kp F5     &none         &none            &kp STAR         &kp FSLH         &none            &none  &none
+&none      &none    &none  &none                &none  &none  &none      &kp KP_EQUAL  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS        &none  &none
+&none      &none    &none  &none                &none  &none  &none      &kp LS(LPAR)  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS         &none  &none
+&none      &none    &none  &kp C_AL_CALCULATOR  &none  &none  &kp PG_UP  &kp LS(RPAR)  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &unicode_dot     &none  &kp BSPC
+&none      &none    &none  &none                &none  &none  &kp HOME   &kp END       &kp PG_DN        &kp LS(INS)      &none            &kp KP_NUMBER_0  &none  &kp LS(KP_ENTER)
+            >;
+        };
+
+        mo2_layer {
+            bindings = <
+&kp GRAVE       &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &none  &kp F6  &kp F7  &kp F8       &kp F9  &kp F10       &kp F11     &kp F12
+&none           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none  &none   &none   &none        &none   &bt BT_CLR    &bt BT_NXT  &bt BT_PRV
+&kp KP_NUMLOCK  &none         &none         &none         &none         &none         &none  &none   &none   &none        &none   &none         &none       &none
+&none           &none         &none         &none         &none         &none         &none  &none   &none   &none        &none   &none         &none       &kp PAUSE_BREAK
+&none           &none         &none         &none         &none         &none         &none  &none   &none   &kp LC(INS)  &none   &kp C_VOL_DN  &none       &kp LC(KP_ENTER)
+            >;
+        };
+    };
+};
