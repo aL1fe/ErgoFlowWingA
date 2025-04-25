@@ -34,21 +34,21 @@
 
         mo1_layer {
             bindings = <
-&kp TILDE  &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp F5     &pass01         &none            &kp STAR         &kp FSLH         &none            &none  &bt BT_CLR
-&none      &none        &none  &none                &none  &none  &none      &kp KP_EQUAL  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS        &none  &none
-&none      &none        &none  &none                &none  &none  &none      &kp LS(LPAR)  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS         &none  &none
-&none      &none        &none  &kp C_AL_CALCULATOR  &none  &none  &kp PG_UP  &kp LS(RPAR)  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &unicode_dot     &none  &kp BSPC
-&none      &none        &none  &none                &none  &none  &kp HOME   &kp END       &kp PG_DN        &kp LS(INS)      &none            &kp KP_NUMBER_0  &none  &kp LS(KP_ENTER)
+&kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2         &bt BT_SEL 3  &bt BT_SEL 4  &kp F5     &pass01       &none            &kp STAR         &kp FSLH         &none            &none  &bt BT_CLR
+&none      &none         &none         &none                &none         &none         &none      &kp KP_EQUAL  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS        &none  &none
+&none      &none         &none         &none                &none         &none         &none      &kp LS(LPAR)  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS         &none  &none
+&none      &none         &none         &kp C_AL_CALCULATOR  &none         &none         &kp PG_UP  &kp LS(RPAR)  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &unicode_dot     &none  &kp BSPC
+&none      &none         &none         &none                &none         &none         &kp HOME   &kp END       &kp PG_DN        &kp LS(INS)      &none            &kp KP_NUMBER_0  &none  &kp LS(KP_ENTER)
             >;
         };
 
         mo2_layer {
             bindings = <
-&kp GRAVE       &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &none  &kp F6  &kp F7  &kp F8       &kp F9  &kp F10       &kp F11     &kp F12
-&none           &none  &none  &none  &none  &none  &none  &none   &none   &none        &none   &none    &none  &none
-&kp KP_NUMLOCK  &none         &none         &none         &none         &none         &none  &none   &none   &none        &none   &none         &none       &none
-&none           &none         &none         &none         &none         &none         &none  &none   &none   &none        &none   &none         &none       &kp PAUSE_BREAK
-&none           &none         &none         &none         &none         &none         &none  &none   &none   &kp LC(INS)  &none   &kp C_VOL_DN  &none       &kp LC(KP_ENTER)
+&kp GRAVE       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp LC(F5)    &kp F6  &kp F7        &kp F8       &kp F9  &kp F10  &kp F11  &kp F12
+&none           &none   &none   &none   &none   &none   &none         &none   &none         &none        &none   &none    &none    &none
+&kp KP_NUMLOCK  &none   &none   &none   &none   &none   &none         &none   &none         &none        &none   &none    &none    &none
+&none           &none   &none   &none   &none   &none   &kp C_VOL_UP  &none   &none         &none        &none   &none    &none    &kp PAUSE_BREAK
+&none           &none   &none   &none   &none   &none   &none         &none   &kp C_VOL_DN  &kp LC(INS)  &none   &none    &none    &kp LC(KP_ENTER)
             >;
         };
     };
