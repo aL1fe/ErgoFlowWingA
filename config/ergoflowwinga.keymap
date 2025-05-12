@@ -48,7 +48,17 @@
 &none           &none   &none   &none   &none   &none   &kp C_VOLUME_UP    &none   &none           &none   &none   &none    &none    &none
 &kp KP_NUMLOCK  &none   &none   &none   &none   &none   &none              &none   &none           &none   &none   &none    &none    &none
 &none           &none   &none   &none   &none   &none   &kp C_VOLUME_DOWN  &none   &none           &none   &none   &none    &none    &kp PAUSE_BREAK
-&none           &none   &none   &none   &none   &none   &none              &none   &kp LC(INSERT)  &none   &none   &none    &none    &kp LC(KP_ENTER)
+&none           &none   &none   &none   &mo 3   &none   &none              &none   &kp LC(INSERT)  &none   &none   &none    &none    &kp LC(KP_ENTER)
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none  &none  &none  &none  &none  &none  &none  &none
+&none       &none         &none         &none         &none         &none         &none  &none  &none  &none  &none  &none  &none  &none
+&none       &none         &none         &none         &none         &none         &none  &none  &none  &none  &none  &none  &none  &none
+&none       &none         &none         &none         &none         &none         &none  &none  &none  &none  &none  &none  &none  &none
+&none       &none         &none         &none         &none         &none         &none  &none  &none  &none  &none  &none  &none  &none
             >;
         };
     };
